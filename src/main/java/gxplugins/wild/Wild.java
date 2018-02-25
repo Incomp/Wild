@@ -9,7 +9,6 @@ import cn.nukkit.utils.TextFormat;
 import gxplugins.random.Utils;
 
 /**
- *
  * @author PikyCZ
  */
 public class Wild extends PluginBase {
@@ -35,9 +34,9 @@ public class Wild extends PluginBase {
             case "wild":
                 if (sender.hasPermission("gxwild.command.wild")) {
                     if (sender instanceof Player) {
-                        x = Utils.rand(1, 350000);
-                        y = Utils.rand(1, 256);
-                        z = Utils.rand(1, 350000);
+                        x = Utils.rand(1, 35000);
+                        y = Utils.rand(1, 123);
+                        z = Utils.rand(1, 35000);
                         ((Player) sender).teleport(((Player) sender).getLevel().getSafeSpawn(new Vector3(x, y, z)));
                         ((Player) sender).sendTip(TextFormat.GREEN + "[Wild] You've been teleported somewhere wild!");
                         sender.sendMessage(TextFormat.RED + "[Wild] teleporting");
@@ -57,3 +56,4 @@ public class Wild extends PluginBase {
     }
 
 }
+
