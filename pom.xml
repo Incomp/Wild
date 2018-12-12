@@ -3,12 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.pikycz</groupId>
   <artifactId>Wild</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <repositories>
@@ -46,13 +44,15 @@
           <include>config.yml</include>
         </includes>
       </resource>
+      <!-- 
       <resource>
-        <directory>resources/modules/</directory>
+        <directory>resources</directory>
         <filtering>false</filtering>
         <includes>
           <include>**/*.yml</include>
         </includes>
       </resource>
+      -->
     </resources>
     <plugins>
       <plugin>
