@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
-import gxplugins.random.Utils;
+import main.java.gxplugins.random.Utils;
 
 /**
  * @author PikyCZ
