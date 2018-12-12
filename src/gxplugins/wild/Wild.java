@@ -1,4 +1,4 @@
-package main.java.gxplugins.wild;
+package gxplugins.wild;
 
 import cn.nukkit.Player;
 import cn.nukkit.command.Command;
@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
-import main.java.gxplugins.random.Utils;
+import gxplugins.wild.random.Utils;
 
 /**
  * @author PikyCZ

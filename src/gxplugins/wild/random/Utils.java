@@ -1,4 +1,4 @@
-package main.java.gxplugins.random;
+package gxplugins.wild.random;
 
 import java.util.Random;
 
