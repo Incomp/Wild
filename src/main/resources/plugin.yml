@@ -1,17 +1,17 @@
 name: WildPlugin
+description: "A tiny plugin that adds a very primitive random teleport command."
+authors: ["PikyCZ", "Incomp"]
 main: gxplugins.wild.Wild
-version: "1.0"
-api: ["1.0.5"]
-author: PikyCZ
+version: ${project.version}
+
 
 commands:
   wild:
-    description: You've been teleported somewhere wild
-    aliases: ["wild"]
+    description: "Used to teleport to a random place."
+    aliases: ["/randomtp", "/rtp", "/wilderness"]
     usage: "/wild"
     permission: gxwild.command.wild
     
 permissions:
   gxwild.command.wild:
-    description: ""
     default: true

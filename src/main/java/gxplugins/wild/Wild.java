@@ -1,4 +1,4 @@
-package gxplugins.wild;
+package main.java.gxplugins.wild;
 
 import cn.nukkit.Player;
 import cn.nukkit.command.Command;
@@ -13,47 +13,48 @@ import gxplugins.random.Utils;
  */
 public class Wild extends PluginBase {
 
-    int x;
-    int y;
-    int z;
+	int x;
+	int y;
+	int z;
 
-    public void onEnable() {
-        this.getLogger().info(TextFormat.GREEN + "[Wild] enable");
-    }
+	public void onEnable() {
+		// Logging should be automatic
+	}
 
-    /**
-     * @param sender
-     * @param cmd
-     * @param label
-     * @param args
-     * @return
-     */
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        switch (cmd.getName()) {
-            case "wild":
-                if (sender.hasPermission("gxwild.command.wild")) {
-                    if (sender instanceof Player) {
-                        x = Utils.rand(1, 35000);
-                        y = Utils.rand(1, 123);
-                        z = Utils.rand(1, 35000);
-                        ((Player) sender).teleport(((Player) sender).getLevel().getSafeSpawn(new Vector3(x, y, z)));
-                        ((Player) sender).sendTip(TextFormat.GREEN + "[Wild] You've been teleported somewhere wild!");
-                        sender.sendMessage(TextFormat.RED + "[Wild] teleporting");
-                    } else {
-                        sender.sendMessage(TextFormat.RED + "[Wild] Only in-game!");
-                    }
-                } else {
-                    sender.sendMessage(TextFormat.RED + "[Wild] You have no permission to use this command!");
-                }
-                return true;
-        }
-        return false;
-    }
+	/**
+	 * @param sender
+	 * @param cmd
+	 * @param label
+	 * @param args
+	 * @return
+	 */
+	@Override
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		switch (cmd.getName()) {
+			case "wild":
+				if (sender.hasPermission("gxwild.command.wild")) {
+					if (sender instanceof Player) {
+						x = Utils.rand(1, 35000);
+						y = Utils.rand(1, 123);
+						z = Utils.rand(1, 35000);
 
-    public void onDisable() {
-        this.getLogger().info(TextFormat.RED + "[Wild] has been disabled!");
-    }
+						Player p = (Player) sender;
+
+						p.teleport(p.getLevel().getSafeSpawn(new Vector3(x, y, z)));
+						sender.sendMessage(TextFormat.colorize("&7Poof."));
+					} else {
+						sender.sendMessage(TextFormat.colorize("&4Only players can use that command."));
+					}
+				} else {
+					sender.sendMessage(TextFormat.colorize("&7Poof."));
+				}
+				return true;
+		}
+		return false;
+	}
+
+	public void onDisable() {
+		// Logging should be automatic
+	}
 
 }
-
