@@ -4,7 +4,6 @@
   <groupId>com.pikycz</groupId>
   <artifactId>Wild</artifactId>
   <version>0.0.1</version>
-  <packaging>jar</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +29,7 @@
   </dependencies>
 
   <build>
-    <finalName>Incore_v${project.version}</finalName>
+    <finalName>Wild_v${project.version}</finalName>
     <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
