@@ -2,6 +2,7 @@ name: WildPlugin
 description: "A tiny plugin that adds a very primitive random teleport command."
 authors: ["PikyCZ", "Incomp"]
 main: gxplugins.wild.Wild
+api: ["1.0.5"]
 version: ${project.version}
 
 
